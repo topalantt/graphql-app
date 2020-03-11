@@ -13,14 +13,14 @@ Director.find({}).then(directors => {
 
       Director.find({}, '_id').then(ids => {
         Movie.insertMany([
-          { name: 'Pulp Fiction', genre: 'Crime', directorId: ids[0]._id },
-          { name: '1984', genre: 'Sci-Fi', directorId: ids[1]._id },
-          { name: 'V for vendetta', genre: 'Sci-Fi-Triller', directorId: ids[2]._id },
-          { name: 'Snatch', genre: 'Crime-Comedy', directorId: ids[3]._id, },
-          { name: 'Reservoir Dogs', genre: 'Crime', directorId: ids[0]._id },
-          { name: 'The Hateful Eight', genre: 'Crime', directorId: ids[0]._id },
-          { name: 'Inglourious Basterds', genre: 'Crime', directorId: ids[0]._id },
-          { name: 'Lock, Stock and Two Smoking Barrels', genre: 'Crime-Comedy', directorId: ids[3]._id }
+          { name: 'Pulp Fiction', genre: 'Crime', directorId: ids[0]._id, watched: false, rate: 0 },
+          { name: '1984', genre: 'Sci-Fi', directorId: ids[1]._id, watched: false, rate: 0 },
+          { name: 'V for vendetta', genre: 'Sci-Fi-Triller', directorId: ids[2]._id, watched: false, rate: 0 },
+          { name: 'Snatch', genre: 'Crime-Comedy', directorId: ids[3]._id, watched: false, rate: 0 },
+          { name: 'Reservoir Dogs', genre: 'Crime', directorId: ids[0]._id, watched: false, rate: 0 },
+          { name: 'The Hateful Eight', genre: 'Crime', directorId: ids[0]._id, watched: false, rate: 0 },
+          { name: 'Inglourious Basterds', genre: 'Crime', directorId: ids[0]._id, watched: false, rate: 0 },
+          { name: 'Lock, Stock and Two Smoking Barrels', genre: 'Crime-Comedy', directorId: ids[3]._id, watched: false, rate: 0 }
         ], () => {
           console.log('Movies are saved');
 
