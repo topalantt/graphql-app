@@ -1,12 +1,12 @@
-##Start App guide
+## Start App guide
 
-#####Run mongo
+##### Run mongo
 
 ```
 sudo mongod
 ```
 
-#####Run server
+##### Run server
 
 ```
 cd server
@@ -14,7 +14,7 @@ yarn install
 yarn run dev
 ```
 
-#####Run client
+##### Run client
 
 ```
 cd application
